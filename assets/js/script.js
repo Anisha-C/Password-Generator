@@ -1,4 +1,12 @@
-// Assignment code here
+// Variables
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var num = "1234567890";
+var specialSym = "!@#$%^&*()_-+=|[]{};:',<>./?";
+
+var letters
+var numbers
+var symbols
 
 
 // Get references to the #generate element

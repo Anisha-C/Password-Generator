@@ -31,6 +31,45 @@ function passwordLength(){
   }
 
 
+  //function to call and combine characters
+  function selectChar(){
+    console.log("selectChar ran")
+     var characters = "";
+  
+     var useLowerCase = window.confirm("Would you like to have lower case characters in your password?");
+      
+      if(useLowerCase){
+      characters += lowerCase
+      }
+      
+      var useUpperCase = window.confirm("Would you like to have upper caseccharacters in your password?");
+  
+      if(useUpperCase){
+        characters += upperCase
+      }
+  
+      var useNum = window.confirm("Would you like to have numbers in your password?");
+  
+      if(useNum){
+        characters += num
+      }
+  
+      var useSpecialSym= window.confirm("Would you like to have upper case characters in your password?");
+  
+      if(useSpecialSym){
+        characters += specialSym
+      }
+  
+      if (!useLowerCase && !useUpperCase && !useNum && !useSpecialSym){
+      window.alert("Invaild Input! Need to pick atleast one option. Please try again"); 
+      selectChar();
+      }
+  console.log(characters);
+    return characters;
+  }  
+  
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 

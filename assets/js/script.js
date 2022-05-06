@@ -1,5 +1,4 @@
 // Variables
-
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var num = "1234567890";
@@ -29,7 +28,6 @@ function passwordLength(){
     }
     return letters;
   }
-
 
   //function to call and combine characters
   function selectChar(){
@@ -68,19 +66,34 @@ function passwordLength(){
     return characters;
   }  
   
-
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  //Generate password function, still needs elements add
+  function generatePassword(){
+    var length = passwordLength();
+    var char = selectChar();
+     char = char.split("");
+     console.log(char);
+ 
+     var callPassword = "";
+ 
+     for(var i = 0; i < length; i++){
+         callPassword += char[Math.floor(Math.random() * char.length - 1)];
+       }
+ 
+     return callPassword;
+     }
+ 
+ 
+ // Get references to the #generate element
+ var generateBtn = document.querySelector("#generate");
+ 
+ // Write password to the #password input
+ function writePassword() {
+   var password = generatePassword();
+   var passwordText = document.querySelector("#password");
+ 
+   passwordText.value = password;
+ 
+ }
+ 
+ // Add event listener to generate button
+ generateBtn.addEventListener("click", writePassword);

@@ -1,7 +1,7 @@
 # Password-Generator
 
 ## Purpose
-The purpose of this portfolio is to showcase my projects as I continue to learn different computer languages and skills
+The purpose of this website is to provide the user with a password with in certain parameters.
 
 ## Built With
 * HTML
